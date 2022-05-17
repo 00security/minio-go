@@ -22,7 +22,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/minio/sha256-simd"
+	sha256 "github.com/minio/sha256-simd"
 )
 
 // unsignedPayload - value to be set to X-Amz-Content-Sha256 header when

@@ -37,10 +37,10 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/00security/minio-go/v7/pkg/credentials"
+	"github.com/00security/minio-go/v7/pkg/s3utils"
+	"github.com/00security/minio-go/v7/pkg/signer"
 	md5simd "github.com/minio/md5-simd"
-	"github.com/minio/minio-go/v7/pkg/credentials"
-	"github.com/minio/minio-go/v7/pkg/s3utils"
-	"github.com/minio/minio-go/v7/pkg/signer"
 	"golang.org/x/net/publicsuffix"
 )
 
@@ -102,6 +102,7 @@ type Options struct {
 	Transport    http.RoundTripper
 	Region       string
 	BucketLookup BucketLookupType
+	PresignedURL *url.URL
 
 	// Custom hash routines. Leave nil to use standard.
 	CustomMD5    func() md5simd.Hasher
