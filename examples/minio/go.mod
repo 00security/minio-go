@@ -1,7 +1,7 @@
-module github.com/minio/minio-go/examples/minio
+module github.com/00security/minio-go/examples/minio
 
 go 1.14
 
-require github.com/minio/minio-go/v7 v7.0.10
+require github.com/00security/minio-go/v7 v7.0.10
 
-replace github.com/minio/minio-go/v7 v7.0.10 => ../..
+replace github.com/00security/minio-go/v7 v7.0.10 => ../..
